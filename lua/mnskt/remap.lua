@@ -45,3 +45,6 @@ vim.keymap.set("n", "<leader>Q", "<cmd>e ~/.config/nvim<cr>")
 vim.keymap.set("n", "<C-]>", "<C-]>zz")
 vim.keymap.set("n", "<C-O>", "<C-O>zz")
 vim.keymap.set("n", "<C-I>", "<C-I>zz")
+
+vim.keymap.set("n", "<leader>z", "<cmd>:60 vsplit .<cr><C-w>l")
+vim.keymap.set("n", "<leader>Z", "<C-w>o")
