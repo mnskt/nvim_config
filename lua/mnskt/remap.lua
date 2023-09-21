@@ -34,7 +34,6 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- Start replace all occurances of the word the cursor is on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-
 vim.keymap.set("n", "<leader><leader>", function()
         vim.cmd("so")
     end)
@@ -48,3 +47,8 @@ vim.keymap.set("n", "<C-I>", "<C-I>zz")
 
 vim.keymap.set("n", "<leader>z", "<cmd>:60 vsplit .<cr><C-w>l")
 vim.keymap.set("n", "<leader>Z", "<C-w>o")
+
+-- Copy relative path, full path and file name to the unnamed registry
+vim.keymap.set("n", "<leader>pr", "<cmd>:let @+ = expand(\"%\")<cr>")
+vim.keymap.set("n", "<leader>pf", "<cmd>:let @+ = expand(\"%:p\")<cr>")
+vim.keymap.set("n", "<leader>pn", "<cmd>:let @+ = expand(\"%:t\")<cr>")
